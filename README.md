@@ -2,11 +2,9 @@
 
 > Welcome to the Paste As project. The Paste As Plugin makes pasting text or raw HTML easier and simpler. Copy the HTML to the clipboard, click on "Insert Paste As", click Ok. That's it, two clicks and the HTML is inserted into your post as formatted HTML (i.e. you get the image/bitmap/picture and not the HTML tags...).
 
-> Think "Paste As Plain Text..." Or "Paste As HTML..."
-
 Here are some preview screenshots:
 
-![Paste As](Screenshots\WLWPasteAs.1.0.g.gif)
+![Paste As](Screenshots/WLWPasteAs.1.0.g.gif)
 
 # v1.0.1.2 Released
 
@@ -17,7 +15,7 @@ The [Changelog](CHANGELOG.md) has a few more details and information.
 1. Download [Paste As Plugin](https://github.com/coldscientist/OLWPasteAs/releases/latest).
 2. Close/exit Open Live Writer if it is running.
 3. By default OLW will look in the Plugins folder inside the application path (e.g: `C:\Users\UserName\AppData\Local\OpenLiveWriter\app-0.5.1.3\Plugins`) but this path will change as OLW auto-updates itself (i.e. the app number will change). To install copy the plugin to that path using the latest `…\app-x.x.x.x` folder present on your system. Each time OLW updates to a new version you will need to re-copy or move the plugin into the new `…\app-x.x.x.x` folder.
-4. Alternatively use this approach: OLW (like WLW before it) checks the registry for plugins too and so you can add a registry key telling OLW where to find the plugin. Whilst this feature is supported by OLW this should enable the plugin to survive OLW auto updates without you having to do anything. Just download and extract the plugin to a folder on your harddrive and then add a new registry key to `HKEY_CURRENT_USER\SOFTWARE\OpenLiveWriter\PluginAssemblies` with the name (can be anything) and the location of the plugin. For example: ![OLW Plugin Assemblies](Screenshots\OLWPasteAs-PluginAssemblies.gif)
+4. Alternatively use this approach: OLW (like WLW before it) checks the registry for plugins too and so you can add a registry key telling OLW where to find the plugin. Whilst this feature is supported by OLW this should enable the plugin to survive OLW auto updates without you having to do anything. Just download and extract the plugin to a folder on your harddrive and then add a new registry key to `HKEY_CURRENT_USER\SOFTWARE\OpenLiveWriter\PluginAssemblies` with the name (can be anything) and the location of the plugin. For example: ![OLW Plugin Assemblies](Screenshots/OLWPasteAs-PluginAssemblies.gif)
 4. Start Open Live Writer.
 5. That's it!
 
