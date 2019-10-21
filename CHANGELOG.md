@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## V1.0.1.2, 2019-10-21
 ### Added
 - It also gets wrapped in a `<code>` block.
-- This plug-in will look for an RTF encoding of some code in the clipboard and convert it to HTML with <span> elements galore.
+- This plug-in will look for an RTF encoding of some code in the clipboard and convert it to HTML with <span> elements galore  using [RtfPipe](https://github.com/erdomke/RtfPipe).
 
 ## V1.0.1.1, 2006-10-14
 ### Added
