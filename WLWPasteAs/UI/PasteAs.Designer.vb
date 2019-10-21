@@ -183,7 +183,7 @@ Partial Class PasteAs
     Me.PasteAsComboBox.Location = New System.Drawing.Point(74, 3)
     Me.PasteAsComboBox.Name = "PasteAsComboBox"
     Me.PasteAsComboBox.Size = New System.Drawing.Size(439, 21)
-    Me.PasteAsComboBox.TabIndex = 2
+    Me.PasteAsComboBox.TabIndex = 3
     '
     'PasteAsTextBox
     '
