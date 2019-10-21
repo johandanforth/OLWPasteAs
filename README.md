@@ -2,6 +2,8 @@
 
 > Welcome to the Paste As project. The Paste As Plugin makes pasting text or raw HTML easier and simpler. Copy the HTML to the clipboard, click on "Insert Paste As", click Ok. That's it, two clicks and the HTML is inserted into your post as formatted HTML (i.e. you get the image/bitmap/picture and not the HTML tags...).
 
+Fork from [WLW Paste As](https://coolthingoftheday.blogspot.com/2006/09/wlw-paste-as-10-plugin-preview.html) to allow "Paste As Plain Text..." Or "Paste As HTML..." into Open Live Writer.
+
 Here are some preview screenshots:
 
 ![Paste As](Screenshots/WLWPasteAs.1.0.g.gif)
