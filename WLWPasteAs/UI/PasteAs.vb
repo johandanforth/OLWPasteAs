@@ -90,14 +90,19 @@ Public Class PasteAs
         ' Me.PasteAsTextBox.Text = Mid(myString, StartOffset + 20, EndOffset - StartOffset - 20)
 	  ' End If
 	  
-	  If My.Computer.Clipboard.ContainsText(TextDataFormat.Rtf) = True Then
-		SelectedTextRtf = True
-		Me.PasteAsTextBox.Text = RtfPipe.Rtf.ToHtml(My.Computer.Clipboard.GetText(TextDataFormat.Rtf))
-	  End If
-
-    Catch ex As Exception
+	 Catch ex As Exception
       MsgBox("Error loading templates. Error " & ex.Message)
     End Try
+	
+	If My.Computer.Clipboard.ContainsText(TextDataFormat.Rtf) = True Then
+		SelectedTextRtf = True
+		Try
+			Me.PasteAsTextBox.Text = RtfPipe.Rtf.ToHtml(My.Computer.Clipboard.GetText(TextDataFormat.Rtf))
+			
+		Catch ex As Exception
+
+		End Try
+	End If
 
   End Sub
 
@@ -172,9 +177,9 @@ Public Class PasteAs
 
       Case Settings.LineBreakConverisonOptions.NoConversion
 		If SelectedTextRtf() Then
-			HTML = System.Web.HttpUtility.HtmlEncode(PasteAsTextBox.Text)
-		Else
 			HTML = PasteAsTextBox.Text
+		Else
+			HTML = System.Web.HttpUtility.HtmlEncode(PasteAsTextBox.Text)
 		End If
 
       Case Else
