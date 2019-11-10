@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## V1.0.1.3, 2019-11-09
+### Fixed
+- RTF error handling that could cause a error message for the user when opening "Paste As" plugin.
+- RTF parsing when user wasn't using Line Break conversion.
+
 ## V1.0.1.2, 2019-10-21
 ### Added
 - It also gets wrapped in a `<code>` block.
