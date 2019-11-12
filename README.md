@@ -8,10 +8,6 @@ Here are some preview screenshots:
 
 ![Paste As](Screenshots/WLWPasteAs.1.0.g.gif)
 
-# v1.0.1.2 Released
-
-The [Changelog](CHANGELOG.md) has a few more details and information.
-
 # Installation Instructions
 
 1. Download [Paste As Plugin](https://github.com/coldscientist/OLWPasteAs/releases/latest).
