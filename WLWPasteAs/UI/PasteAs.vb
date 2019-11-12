@@ -78,8 +78,8 @@ Public Class PasteAs
     End Select
 
     Try
+      SelectedTextRtf = False
       If My.Computer.Clipboard.ContainsText = True Then
-		SelectedTextRtf = False
 		Me.PasteAsTextBox.Text = My.Computer.Clipboard.GetText()
       End If
 	  
@@ -102,6 +102,10 @@ Public Class PasteAs
 		Catch ex As Exception
 
 		End Try
+	End If
+	
+	If Me.PasteAsTextBox.Text = My.Computer.Clipboard.GetText() Then
+		SelectedTextRtf = False
 	End If
 
   End Sub
@@ -190,30 +194,34 @@ Public Class PasteAs
 		End If
 
     End Select
+	
+	If (Not String.IsNullOrEmpty(HTML)) Then
+		Select Case Me.PasteAsComboBox.SelectedIndex
+		  Case -1 'Unknown, paste as Plain test
+			'HTML = PasteAsTextBox.Text
+			'No Op needed
+		  Case 0 'Plain test
+			'HTML = PasteAsTextBox.Text
+			'No Op needed
 
-    Select Case Me.PasteAsComboBox.SelectedIndex
-      Case -1 'Unknown, paste as Plain test
-        'HTML = PasteAsTextBox.Text
-        'No Op needed
-      Case 0 'Plain test
-        'HTML = PasteAsTextBox.Text
-        'No Op needed
+		  Case 1 'Block Quote
+			HTML = "<BLOCKQUOTE>" & HTML & "</BLOCKQUOTE>"
 
-      Case 1 'Block Quote
-        HTML = "<BLOCKQUOTE>" & HTML & "</BLOCKQUOTE>"
+		  Case 2
+			HTML = "<PRE><CODE>" & HTML & "</CODE></PRE> "
+			
+		  Case 3
+			HTML = "<CODE>" & HTML & "</CODE> "
 
-      Case 2
-        HTML = "<PRE>" & HTML & "</PRE> "
-		
-	  Case 3
-		HTML = "<CODE>" & HTML & "</CODE> "
+		  Case Else 'Unknown, paste as Plain test
+			'HTML = PasteAsTextBox.Text
+			'No Op needed
 
-      Case Else 'Unknown, paste as Plain test
-        'HTML = PasteAsTextBox.Text
-        'No Op needed
-
-    End Select
-
+		End Select
+    Else
+		HTML = ""
+    End If
+	
     Return HTML
 
   End Function
